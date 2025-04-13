@@ -11,16 +11,18 @@ Ideal para apps que requieren mostrar una imagen de usuario sin necesidad de sub
 📌 Configuración en AppSheet
 
 - Tipo de campo: Virtual Column  
-- Tipo de dato: Image  
+- Tipo de dato: Image
 
-🧪 Fórmula en AppSheet
+### 🧪 Fórmula en AppSheet
 
+```appsheet
 CONCATENATE(
   "https://ui-avatars.com/api/?name=",
   ENCODEURL(LEFT([Nombre_Completo], 1)),
   ENCODEURL(LEFT(INDEX(SPLIT([Nombre_Completo], " "), 2), 1)),
   "&background=CCCCCC&color=000000&size=128"
 )
+```
 
 ---
 
